@@ -1,3 +1,18 @@
+**✨ Features**
+## **Mobile View Functionality**
+
+The product page is fully responsive and optimized for mobile devices.
+
+## **Features Product Page**
+- ****
+- **1.Sticky Header**
+- **2. Product Zoom**
+- **3.Tab Switch Steps Process**
+- **4.Modal**
+
+- MOBILE 
+
+_WEBPAGE
 <img width="1079" height="498" alt="Screenshot from 2026-03-23 00-34-06" src="https://github.com/user-attachments/assets/ee7f230c-6544-44ff-9088-0c191a433c80" />
 <img width="1173" height="646" alt="Screenshot from 2026-03-23 00-50-13" src="https://github.com/user-attachments/assets/5c7523c1-ffee-4bab-8ba4-ddf686c44f55" />
 <img width="430" height="593" alt="Screenshot from 2026-03-23 00-39-03" src="https://github.com/user-attachments/assets/95bb387b-6eb4-44ec-b857-58d1e92fb567" />
