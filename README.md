@@ -28,12 +28,23 @@ Application Process
 
 <br>
 <hr>
+Desktop view recording
+[Screencast from 2026-03-23 01-44-03.webm](https://github.com/user-attachments/assets/1a469502-1d89-456b-90ca-dd0617ac8006)
 
+<br>
+<hr>
+
+
+
+<br>
+<hr>
 ##  MOBILE 
 <img width="430" height="593" alt="Screenshot from 2026-03-23 00-39-03" src="https://github.com/user-attachments/assets/95bb387b-6eb4-44ec-b857-58d1e92fb567" />
 
 <img width="430" height="593" alt="Screenshot from 2026-03-23 00-38-01" src="https://github.com/user-attachments/assets/59909d24-eda1-44c7-9929-c51ebd5ee571" />
-Mobile view recosring
+<br>
+<hr>
+Mobile view recoring
 
 [Screencast from 2026-03-23 01-18-28.webm](https://github.com/user-attachments/assets/70eeef2c-0df2-4b64-9c99-dc6a07e9c021)
 
