@@ -34,7 +34,6 @@ Application Process
 
 <img width="430" height="593" alt="Screenshot from 2026-03-23 00-38-01" src="https://github.com/user-attachments/assets/59909d24-eda1-44c7-9929-c51ebd5ee571" />
 Mobile view recosring
-[Screencast from 2026-03-23 01-18-28.webm](https://github.com/user-attachments/assets/ebf524e8-56cc-4d52-b03d-72cf3753505f)
 
 [Screencast from 2026-03-23 01-18-28.webm](https://github.com/user-attachments/assets/70eeef2c-0df2-4b64-9c99-dc6a07e9c021)
 
