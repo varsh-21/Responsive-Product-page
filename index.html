@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium HDPE Pipes &amp; Coils – Mangalam Pipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STICKY PRODUCT BAR
+       Desktop: img + title + price + "Get Quote" button
+       Mobile : img + title + price  (button hidden via CSS)
+  ════════════════════════════════════════════════════════ -->
+  <div class="sticky-header" id="stickyHeader" aria-hidden="true">
+    <div class="sticky-inner">
+      <div class="sticky-content">
+        <img src="assets/images/prod.jpg"
+             width="56" height="56"
+             class="sticky-product-img"
+             alt="HDPE Pipe" loading="lazy" />
+        <div class="product-info">
+          <div class="sticky-title">Premium HDPE Pipes &amp; Coils for Modern Infrastructure</div>
+          <div class="sticky-price">&#8377;4,80,000 &#8211; 7,90,000</div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm desktop-only"
+              onclick="openCallbackModal()">Get Quote</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN HEADER
+  ════════════════════════════════════════════════════════ -->
+  <header class="main-header" id="header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="assets/images/logo.png" height="49"  alt="Mangalam Pipes" />
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list" id="navList">
+          <li><a href="#hero">About Us</a></li>
+          <li class="nav-has-dropdown">
+            <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Products
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="4 6 8 10 12 6"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" role="menu">
+              <li role="menuitem"><a href="#specs">HDPE Pipes</a></li>
+              <li role="menuitem"><a href="#specs">HDPE Fittings</a></li>
+              <li role="menuitem"><a href="#specs">PE-RT Pipes</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="btn btn-primary btn-sm nav-btn"
+                onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Contact Us
+        </button>
+
+        <button class="nav-toggle" id="navToggle"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BREADCRUMBS
+  ════════════════════════════════════════════════════════ -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <div class="breadcrumb-item"><a href="#">Home</a></div>
+      <span class="breadcrumb-sep" aria-hidden="true">&#8250;</span>
+      <div class="breadcrumb-item"><a href="#">Products</a></div>
+      <span class="breadcrumb-sep" aria-hidden="true">&#8250;</span>
+      <div class="breadcrumb-item"><a href="#">HDPE Pipes</a></div>
+      <span class="breadcrumb-sep" aria-hidden="true">&#8250;</span>
+      <div class="breadcrumb-item active" aria-current="page">Premium HDPE Pipes &amp; Coils</div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════════ -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+
+      <!-- Product image carousel -->
+      <div class="carousel-card">
+        <div class="main-image-wrap" id="mainWrap">
+          <img id="mainImg"
+               src="https://images.unsplash.com/photo-1581092160607-a783255640a6?w=900"
+               alt="Premium HDPE Pipes installation" />
+
+          <div class="zoom-lens"    id="zoomLens"></div>
+          <div class="zoom-preview" id="zoomPreview">
+            <img id="zoomImg"
+                 src="https://images.unsplash.com/photo-1581092160607-a783255640a6?w=300"
+                 alt="Zoom" />
+          </div>
+
+          <button class="arrow-btn left"  id="prevBtn" aria-label="Previous image">&#8249;</button>
+          <button class="arrow-btn right" id="nextBtn" aria-label="Next image">&#8250;</button>
+          <div class="img-counter" id="imgCounter" aria-live="polite">1 / 6</div>
+          <div class="zoom-hint"   id="zoomHint">&#128269; Hover to zoom</div>
+        </div>
+
+        <div class="thumb-strip" id="thumbStrip" role="list">
+          <button class="thumb-btn active" data-index="0" role="listitem" aria-label="Image 1">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300" alt="View 1" />
+          </button>
+          <button class="thumb-btn" data-index="1" role="listitem" aria-label="Image 2">
+            <img src="https://picsum.photos/seed/hdpe4/300/200" alt="View 2" />
+          </button>
+          <button class="thumb-btn" data-index="2" role="listitem" aria-label="Image 3">
+            <img src="https://picsum.photos/seed/hdpe1/300/200" alt="View 3" />
+          </button>
+          <button class="thumb-btn" data-index="3" role="listitem" aria-label="Image 4">
+            <img src="https://picsum.photos/seed/hdpe3/300/200" alt="View 4" />
+          </button>
+          <button class="thumb-btn" data-index="4" role="listitem" aria-label="Image 5">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300" alt="View 5" />
+          </button>
+          <button class="thumb-btn" data-index="5" role="listitem" aria-label="Image 6">
+            <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=300" alt="View 6" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="badges">
+          <div class="badge-container">
+            <img src="assets/images/bis-certified.png" class="badge-img" alt="BIS Certified" />
+            <span class="badge">BIS Certified</span>
+          </div>
+          <div class="badge-container">
+            <img src="assets/images/iso.png" class="badge-img" alt="ISO 4427" />
+            <span class="badge">ISO 4427</span>
+          </div>
+          <div class="badge-container">
+            <img src="assets/images/CE Certification.png" class="badge-img" alt="ASTM D3035" />
+            <span class="badge">ASTM D3035</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title">Premium HDPE Pipes &amp; Coils for Modern Infrastructure</h1>
+
+        <ul class="hero-features">
+          <li>Leak-Proof Butt Fusion &amp; Electrofusion Joints</li>
+          <li>Superior Chemical &amp; Corrosion Resistance</li>
+          <li>50+ Year Service Life at PN 10, 20&#176;C</li>
+          <li>Diameter Range: 20mm &#8211; 1600mm</li>
+          <li>Pressure Ratings: PN 2.5 to PN 16</li>
+          <li>Operating Temp: -40&#176;C to +80&#176;C</li>
+        </ul>
+
+        <div class="price-card">
+          <div class="price-range-label">Price Range (per unit, bulk)</div>
+          <div class="price-range-value">&#8377;4,80,000 &#8211; 7,90,000</div>
+          <div class="price-meta">
+            <span class="tag tag-shipping">&#128666; Shipping: 6&#8211;12 days</span>
+            <span class="tag tag-returns">&#8617; Returns: 7 days</span>
+          </div>
+          <div class="cert-info">Certifications: ISO Certified, BIS Certified</div>
+        </div>
+
+        <div class="price-buttons">
+          <button class="btn btn-primary"
+                  onclick="openCallbackModal()">Get Custom Quote</button>
+          <button class="btn btn-outline"
+                  onclick="document.getElementById('specs').scrollIntoView({behavior:'smooth'})">
+            View Technical Specs &#8250;
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TRUST BAR
+  ════════════════════════════════════════════════════════ -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-label">Trusted by Hundreds of Companies Globally</div>
+      <div class="trust-items">
+        <img src="assets/images/sponser.png" height="80" alt="Partner" />
+        <img src="assets/images/sponser.png" height="80" alt="Partner" />
+        <img src="assets/images/sponser.png" height="80" alt="Partner" />
+        <img src="assets/images/sponser.png" height="80" alt="Partner" />
+        <img src="assets/images/sponser.png" height="80" alt="Partner" />
+        <img src="assets/images/sponser.png" height="80" alt="Partner" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TECHNICAL SPECS
+  ════════════════════════════════════════════════════════ -->
+  <div class="spec-container">
+    <section class="specs-section" id="specs">
+      <div class="section-header">
+        <h2 class="section-title-technical">Technical Specifications at a Glance</h2>
+        <p class="section-subtitle" style="color:#94a3b8;">
+          Comprehensive performance data demonstrating our commitment to quality and engineering excellence.
+        </p>
+      </div>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Parameter</th><th>Specification</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pipe Diameter Range</td>      <td>20mm to 1600mm (&#190;" to 63")</td></tr>
+          <tr><td>Pressure Ratings</td>         <td>PN 2.5, PN 4, PN 6, PN 8, PN 10, PN 12.5, PN 16</td></tr>
+          <tr><td>Standard Dimension Ratio</td> <td>SDR 33, SDR 26, SDR 21, SDR 17, SDR 13.6, SDR 11</td></tr>
+          <tr><td>Operating Temperature</td>    <td>-40&#176;C to +80&#176;C (-40&#176;F to +176&#176;F)</td></tr>
+          <tr><td>Service Life</td>             <td>50+ Years (at 20&#176;C, PN 10)</td></tr>
+          <tr><td>Material Density</td>         <td>0.95 &#8211; 0.96 g/cm&#179;</td></tr>
+          <tr><td>Certification Standards</td>  <td>IS 5984, ISO 4427, ASTM D3035</td></tr>
+          <tr><td>Joint Types</td>              <td>Butt Fusion, Electrofusion, Mechanical</td></tr>
+          <tr><td>Coil Lengths</td>             <td>Up to 500m (for smaller diameters)</td></tr>
+          <tr><td>Country of Origin</td>        <td>&#127470;&#127475; India</td></tr>
+        </tbody>
+      </table>
+
+      <div style="text-align:center">
+        <button class="btn-download" onclick="openCatalogueModal()">
+          <img src="assets/images/DownloadSimple.png" class="download-img" alt="" aria-hidden="true" />
+          Download Full Technical Datasheet
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FEATURES
+  ════════════════════════════════════════════════════════ -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Built to Last. Engineered to Perform.</h2>
+        <p class="section-subtitle">From corrosive industrial environments to demanding municipal infrastructure — our pipes deliver consistently.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#129514;</div>
+          <h3>Superior Chemical Resistance</h3>
+          <p>HDPE resists a wide range of chemicals, acids, and alkalis. Won&#8217;t corrode, rust, or scale — ensuring pure water quality and extended service life.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#128260;</div>
+          <h3>Exceptional Flexibility &amp; Durability</h3>
+          <p>High flexibility enables coiling for easy transport. Withstands ground movement, seismic activity, and thermal expansion without cracking.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#128279;</div>
+          <h3>Leak-Proof Fusion Welding</h3>
+          <p>Butt fusion and electrofusion welding create joints as strong as the pipe — eliminating leak paths and ensuring zero-maintenance connection integrity.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#128176;</div>
+          <h3>Cost-Effective Long-Term Solution</h3>
+          <p>Lower installation costs, minimal maintenance, and a 50+ year service life make HDPE the most economical choice over the full project lifecycle.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#127807;</div>
+          <h3>Environmentally Sustainable</h3>
+          <p>100% recyclable material, low-carbon footprint, and zero chemical leaching make HDPE the responsible choice for modern infrastructure.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#9989;</div>
+          <h3>Certified Quality Assurance</h3>
+          <p>Every batch tested and certified to IS 5984, ISO 4427, and ASTM D3035. Our in-house lab ensures dimensional accuracy and pressure integrity.</p>
+        </div>
+      </div>
+
+      <div class="getquote-secion">
+        <button class="btn btn-primary btn-sm" onclick="openCallbackModal()">Request a Quote</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FAQ
+  ════════════════════════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><span class="frequent">Frequently </span>Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" aria-expanded="true">
+            What pressure ratings are available for HDPE pipes?
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">We offer pressure ratings from PN 2.5 to PN 16, covering SDR 33, SDR 26, SDR 21, SDR 17, SDR 13.6, and SDR 11 — suitable for water supply, irrigation, gas distribution, and industrial applications.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What diameter range is available?
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Our HDPE pipes range from 20mm to 1600mm outer diameter, available in both straight lengths up to 12m and coils up to 500m for smaller diameters.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What certifications do your pipes carry?
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">All pipes are manufactured to IS 5984, ISO 4427, and ASTM D3035. We are BIS certified and every batch includes a quality certificate with full traceability documentation.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the expected service life?
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">At standard conditions (20&#176;C, PN 10), service life exceeds 50 years. HDPE is highly resistant to fatigue, impact, and chemical attack.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can aluminum tubing be customized?
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">Yes, pipes can be customized in length, diameter, wall thickness, and pressure rating. Contact our sales team for a tailored quote.</div>
+        </div>
+      </div>
+
+      <div class="catalogue-box">
+        <div class="catalogue-text">
+          <h3>Want us to email the entire catalogue?</h3>
+          <p>Enter your email and an expert will share the complete product catalogue within 24 hours.</p>
+        </div>
+        <div class="catalogue-form">
+          <input type="email" class="email-input" placeholder="Email Address" aria-label="Your email" />
+          <button class="email-submit">Request Catalogue</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PROCESS STEPPER
+  ════════════════════════════════════════════════════════ -->
+  <section class="process-section" id="process">
+    <div class="process-header">
+      <h2 class="process-title">Advanced HDPE Pipe Manufacturing Process</h2>
+      <p class="process-subtitle">Our state-of-the-art extrusion technology ensures consistent quality, optimal material properties, and dimensional accuracy in every pipe we manufacture.</p>
+    </div>
+
+    <div class="process-card">
+      <div class="process-tabs" id="processTabs" role="tablist" aria-label="Manufacturing steps">
+        <button class="proc-tab active" role="tab" data-step="0" aria-selected="true">Raw Material</button>
+        <span class="proc-tab-sep" aria-hidden="true"></span>
+        <button class="proc-tab" role="tab" data-step="1" aria-selected="false">Extrusion</button>
+        <span class="proc-tab-sep" aria-hidden="true"></span>
+        <button class="proc-tab" role="tab" data-step="2" aria-selected="false">Cooling</button>
+        <span class="proc-tab-sep" aria-hidden="true"></span>
+        <button class="proc-tab" role="tab" data-step="3" aria-selected="false">Sizing</button>
+        <span class="proc-tab-sep" aria-hidden="true"></span>
+        <button class="proc-tab" role="tab" data-step="4" aria-selected="false">Quality Control</button>
+        <span class="proc-tab-sep" aria-hidden="true"></span>
+        <button class="proc-tab" role="tab" data-step="5" aria-selected="false">Marking</button>
+        <span class="proc-tab-sep" aria-hidden="true"></span>
+        <button class="proc-tab" role="tab" data-step="6" aria-selected="false">Cutting</button>
+        <span class="proc-tab-sep" aria-hidden="true"></span>
+        <button class="proc-tab" role="tab" data-step="7" aria-selected="false">Packaging</button>
+      </div>
+
+      <div class="process-body">
+        <div class="process-text"  id="processText"  role="tabpanel"></div>
+        <div class="process-media" id="processMedia">
+          <img id="processImg" src="" alt="Process step image" />
+          <button class="media-arrow left"  id="mediaLeft"  aria-label="Previous step">&#8249;</button>
+          <button class="media-arrow right" id="mediaRight" aria-label="Next step">&#8250;</button>
+          <div class="media-counter" id="mediaCounter" aria-live="polite">1 / 8</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PORTFOLIO
+  ════════════════════════════════════════════════════════ -->
+  <section class="portfolio">
+    <div class="section-header">
+      <h2 class="section-title">Complete Piping Solutions Portfolio</h2>
+      <p class="section-subtitle">From precision HDPE systems to specialist heating pipes — complete end-to-end piping solutions.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card reveal">
+        <div class="card-body">
+          <h3>HDPE Fittings &amp; Accessories</h3>
+          <p>Complete range of electrofusion and butt fusion fittings including elbows, tees, reducers, and couplers for seamless pipe connections.</p>
+        </div>
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="HDPE Fittings" loading="lazy" />
+        </div>
+        <div class="card-footer"><a href="#" class="btn-learn">Learn More</a></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-body">
+          <h3>Professional Installation Services</h3>
+          <p>Expert installation and fusion welding services ensuring optimal performance, standards compliance, and long-term reliability.</p>
+        </div>
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600" alt="Installation Services" loading="lazy" />
+        </div>
+        <div class="card-footer"><a href="#" class="btn-learn">Learn More</a></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-body">
+          <h3>PE-RT Heating Pipes</h3>
+          <p>Polyethylene of Raised Temperature pipes ideal for underfloor heating, radiator connections, and hot water applications.</p>
+        </div>
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600" alt="PE-RT Pipes" loading="lazy" />
+        </div>
+        <div class="card-footer"><a href="#" class="btn-learn">Learn More</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <div class="cta-text-block">
+        <h2>Didn&#8217;t find <span class="highlight">what you&#8217;re looking for?</span></h2>
+        <p>Talk to our experts for custom solutions and tailored guidance.</p>
+      </div>
+      <a href="#contact" class="btn-expert">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+        </svg>
+        Talk to an Expert
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RESOURCES
+  ════════════════════════════════════════════════════════ -->
+  <section class="resources">
+    <div class="section-header">
+      <h2>Resources &amp; Downloads</h2>
+      <p>All the technical documentation you need to make informed decisions about our HDPE piping solutions.</p>
+    </div>
+
+    <div class="download-list">
+      <div class="download-item">
+        <span>HDPE Pipe Installation Manual (PDF)</span>
+        <a href="#" class="btn-dl">Download PDF <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></a>
+      </div>
+      <div class="download-item">
+        <span>Maintenance &amp; Inspection Handbook (PDF)</span>
+        <a href="#" class="btn-dl">Download PDF <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></a>
+      </div>
+      <div class="download-item">
+        <span>Engineering Specifications Sheet (PDF)</span>
+        <a href="#" class="btn-dl">Download PDF <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════════════════════ -->
+  <section class="contact-hero" id="contact">
+    <div class="contact-hero-inner">
+      <div class="contact-hero-left">
+        <h1>Ready to<br/>Transform Your<br/>Infrastructure<br/>Projects?</h1>
+        <p class="desc">Get a personalised consultation and quote for piping solutions tailored to your specific project requirements.</p>
+        <p class="contact-note">
+          Call us: <strong>+91-XXX-XXX-XXXX</strong><br/>
+          Email: <a href="mailto:info@mangalampipes.com">info@mangalampipes.com</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <p class="card-title">Contact Us Today</p>
+        <div class="form-field"><input type="text"  placeholder="Full Name"     aria-label="Full name" /></div>
+        <div class="form-field"><input type="text"  placeholder="Company Name"  aria-label="Company name" /></div>
+        <div class="form-field"><input type="email" placeholder="Email Address" aria-label="Email" /></div>
+        <div class="form-field">
+          <div class="phone-row">
+            <div class="phone-prefix">+91 <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0l5 6 5-6z"/></svg></div>
+            <input type="tel" placeholder="9000000000" aria-label="Phone" />
+          </div>
+        </div>
+        <button class="btn-quote" onclick="openCallbackModal()">Request Custom Quote</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════ -->
+  <div class="footer-brand-bar">
+    <div class="mangalam-logo">
+      <img src="assets/images/logo.png" height="48"  alt="Mangalam Pipes" />
+    </div>
+    <div class="brand-tagline">
+      Premium <strong>HDPE</strong> Pipes &amp; Fittings<br/>
+      <strong>Manufacturer</strong> in South India
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Mangalam Pipes</div>
+          <p class="footer-brand-desc">Premium HDPE Pipes &amp; Fittings Manufacturer in South India. Delivering precision-engineered piping solutions globally.</p>
+          <div class="footer-contact-lines">
+            <div>2126, Road No. 2, GIDC Sachin, Surat</div>
+            <div><a href="mailto:info@mangalampipes.com">info@mangalampipes.com</a></div>
+            <div><a href="mailto:support@mangalampipes.com">support@mangalampipes.com</a></div>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Quality &amp; Certs</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Products</div>
+          <ul class="footer-links">
+            <li><a href="#">HDPE Pipes</a></li>
+            <li><a href="#">HDPE Fittings</a></li>
+            <li><a href="#">PE-RT Heating Pipes</a></li>
+            <li><a href="#">Installation Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Industries</div>
+          <ul class="footer-links">
+            <li><a href="#">Water Supply</a></li>
+            <li><a href="#">Agriculture</a></li>
+            <li><a href="#">Infrastructure</a></li>
+            <li><a href="#">Industrial</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&#169; 2026 Mangalam Pipes. All rights reserved. &#127470;&#127475; Made in India.</p>
+        <div class="footer-certs">IS 5984 &middot; ISO 4427 &middot; ASTM D3035</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MODAL: Download Catalogue
+  ════════════════════════════════════════════════════════ -->
+  <div id="catalogueModal" class="modal-overlay"
+       role="dialog" aria-modal="true"
+       aria-labelledby="catalogueTitle" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 id="catalogueTitle">Let us email the entire catalogue to you</h2>
+        <button class="modal-close" id="catalogueClose" aria-label="Close">&times;</button>
+      </div>
+      <form id="catalogueForm" class="modal-form" novalidate>
+        <div class="form-group">
+          <label for="email">Your Email <span class="required" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email"
+                 placeholder="example@gmail.com" required autocomplete="email" />
+          <span class="field-error" id="emailError" role="alert">
+            Please enter a valid email address (e.g. name@domain.com)
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Your Contact <span class="optional">(Optional)</span></label>
+          <div class="phone-input-wrapper">
+            <span class="phone-prefix">+91</span>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="9000000000" maxlength="10" autocomplete="tel" />
+          </div>
+          <span class="field-error" id="phoneError" role="alert">
+            Phone number must be exactly 10 digits
+          </span>
+        </div>
+        <button type="submit" class="btn btn-primary"
+                id="catalogueSubmit" style="width:100%" disabled>
+          Download Brochure
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MODAL: Request Callback
+  ════════════════════════════════════════════════════════ -->
+  <div id="callbackModal" class="modal-overlay"
+       role="dialog" aria-modal="true"
+       aria-labelledby="callbackTitle" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 id="callbackTitle">Request a Call Back</h2>
+        <button class="modal-close" id="callbackClose" aria-label="Close">&times;</button>
+      </div>
+      <form id="callbackForm" class="modal-form" novalidate>
+        <div class="form-group">
+          <input type="text" id="fullName" name="fullName"
+                 placeholder="Full Name" required autocomplete="name" />
+          <span class="field-error" id="nameError" role="alert">
+            Please enter your full name (at least 2 characters)
+          </span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="company" name="company"
+                 placeholder="Company Name" autocomplete="organization" />
+        </div>
+        <div class="form-group">
+          <input type="email" id="callbackEmail" name="email"
+                 placeholder="Email Address" required autocomplete="email" />
+          <span class="field-error" id="callbackEmailError" role="alert">
+            Please enter a valid email address
+          </span>
+        </div>
+        <div class="form-group">
+          <div class="phone-input-wrapper">
+            <span class="phone-prefix">+91</span>
+            <input type="tel" id="phoneNumber" name="phone"
+                   placeholder="9000000000" maxlength="10"
+                   required autocomplete="tel" />
+          </div>
+          <span class="field-error" id="callbackPhoneError" role="alert">
+            Phone number must be exactly 10 digits
+          </span>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn"
+                id="callbackSubmit" style="width:100%" disabled>
+          Submit Form
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
