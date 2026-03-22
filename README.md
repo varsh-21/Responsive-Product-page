@@ -30,8 +30,11 @@ Application Process
 <hr>
 
 Desktop view recording
+
 [Screencast from 2026-03-23 01-44-03.webm](https://github.com/user-attachments/assets/1a469502-1d89-456b-90ca-dd0617ac8006)
 
+
+[Screencast from 2026-03-23 01-44-03.webm](https://github.com/user-attachments/assets/88e9dc21-f303-4007-ab71-088b69cd92c1)
 
 
 
