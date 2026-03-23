@@ -3,12 +3,12 @@
 The product page is fully responsive.
 
 ## **Features Product Page**
-- ****
+****
 - **1.Sticky Header**
 - **2. Product Zoom**
 - **3.Tab Switch Steps Process**
 - **4.Modal**
-- <br>
+  <br>
 ## _WEBPAGE
 ##### Product Zoom
 <img width="1079" height="625" alt="Screenshot from 2026-03-23 00-37-24" src="https://github.com/user-attachments/assets/0160feab-f098-409b-9fe9-a84bbcd6b8e4" />
