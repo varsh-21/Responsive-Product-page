@@ -10,7 +10,7 @@ The product page is fully responsive.
 - **Modal**
   <br>
 ### _WEBPAGE
-##### Product Zoom
+### Product Zoom
 <img width="1079" height="625" alt="Screenshot from 2026-03-23 00-37-24" src="https://github.com/user-attachments/assets/0160feab-f098-409b-9fe9-a84bbcd6b8e4" />
 <hr>
 
@@ -28,7 +28,7 @@ Application Process
 
 ### Modals 
 <img width="1079" height="625" alt="Screenshot from 2026-03-23 00-34-59" src="https://github.com/user-attachments/assets/557ea96c-358f-4b01-a0cc-8763f86f65ad" />
-<br>
+<hr>
 <img width="1079" height="625" alt="Screenshot from 2026-03-23 00-34-44" src="https://github.com/user-attachments/assets/ad8af7cb-2129-4564-b75b-a31c120b2c66" />
 
 <br>
