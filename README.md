@@ -6,7 +6,7 @@ The product page is fully responsive.
 ****
 - **Sticky Header**
 - **Product Zoom**
--**Tab Switch Steps Process**
+- **Tab Switch Steps Process**
 - **Modal**
   <br>
 ### _WEBPAGE
