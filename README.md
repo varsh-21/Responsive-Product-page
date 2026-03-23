@@ -35,10 +35,9 @@ Application Process
 <br>
 <hr>
 
-## Desktop view recording
+### Desktop view recording
 
-<br>
-<hr>
+
 
 [Screencast from 2026-03-23 01-44-03.webm](https://github.com/user-attachments/assets/88e9dc21-f303-4007-ab71-088b69cd92c1)
 
@@ -49,19 +48,22 @@ Application Process
 
 ## **Mobile View Functionality**
 
-####  _MOBILE 
 <img width="430" height="593" alt="Screenshot from 2026-03-23 00-39-03" src="https://github.com/user-attachments/assets/95bb387b-6eb4-44ec-b857-58d1e92fb567" />
 
 <br>
 <hr>
+
+
+####  _MOBILE_
 
 <img width="430" height="593" alt="Screenshot from 2026-03-23 00-38-01" src="https://github.com/user-attachments/assets/59909d24-eda1-44c7-9929-c51ebd5ee571" />
 
 <br>
 <hr>
 
-#### Mobile view recoring
+## Mobile view recoring
 
 [Screencast from 2026-03-23 01-18-28.webm](https://github.com/user-attachments/assets/70eeef2c-0df2-4b64-9c99-dc6a07e9c021)
+
 <br>
 <hr>
