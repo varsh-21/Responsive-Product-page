@@ -1,5 +1,6 @@
 **✨ Features**
 
+**DEPLOYED VERSION** CLICK -> https://mellow-kheer-cec7c4.netlify.app/
 The product page is fully responsive.
 
 ## **Features Product Page**
@@ -37,7 +38,7 @@ Application Process
 ### Desktop view RECORDRING
 
 
-
+**DOUBLE TAP !**
 [Screencast from 2026-03-23 01-44-03.webm](https://github.com/user-attachments/assets/88e9dc21-f303-4007-ab71-088b69cd92c1)
 
 
@@ -61,11 +62,12 @@ Application Process
 <hr>
 
 ## Mobile view RECORDRING
-
+**DOUBLE TAP !**
 [Screencast from 2026-03-23 01-18-28.webm](https://github.com/user-attachments/assets/70eeef2c-0df2-4b64-9c99-dc6a07e9c021)
 
 <br>
 <hr>
 
+**DOUBLE TAP !**
 [Screencast from 2026-03-23 14-16-14.webm](https://github.com/user-attachments/assets/da99ccf2-bde5-4315-b506-6c06c65782cc)
 
