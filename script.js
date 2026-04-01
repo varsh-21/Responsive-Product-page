@@ -80,41 +80,82 @@
   }, { passive: true });
 
   /* Zoom */
-  const isHoverDevice = () => window.matchMedia('(hover: hover)').matches;
+  /* ── Zoom ── */
+const LENS_W    = 80;    // must match CSS width
+const LENS_H    = 80;    // must match CSS height
+const PREVIEW_W = 200;   // must match CSS width
+const PREVIEW_H = 200;   // must match CSS height
+const PANEL_GAP = 20;    // space between image edge and preview panel
 
-  mainWrap.addEventListener('mouseenter', () => {
-    if (!isHoverDevice()) return;
-    isZooming = true;
-    zoomImg.src = images[current];
-    zoomLens.style.opacity   = '1';
-    zoomLens.style.transform = 'scale(1)';
-    zoomPreview.classList.add('visible');
-    zoomHint.classList.add('hidden');
-  });
+const ZOOM_X = PREVIEW_W / LENS_W;   // = 4 — how much bigger preview is vs lens
+const ZOOM_Y = PREVIEW_H / LENS_H;   // = 4
 
-  mainWrap.addEventListener('mouseleave', () => {
-    isZooming = false;
-    zoomLens.style.opacity   = '0';
-    zoomLens.style.transform = 'scale(0.85)';
-    zoomPreview.classList.remove('visible');
-  });
+const isHoverDevice = () => window.matchMedia('(hover: hover)').matches;
 
-  mainWrap.addEventListener('mousemove', (e) => {
-    if (!isHoverDevice() || !isZooming) return;
-    const rect = mainWrap.getBoundingClientRect();
-    const lw = zoomLens.offsetWidth, lh = zoomLens.offsetHeight;
-    let lx = Math.max(0, Math.min(e.clientX - rect.left - lw / 2, rect.width  - lw));
-    let ly = Math.max(0, Math.min(e.clientY - rect.top  - lh / 2, rect.height - lh));
-    zoomLens.style.left = `${lx}px`;
-    zoomLens.style.top  = `${ly}px`;
-    const px = lx / (rect.width  - lw);
-    const py = ly / (rect.height - lh);
-    const s  = 2.4;
-    zoomImg.style.transform  = `scale(${s}) translate(${(0.5 - px) * (s - 1) * 100}%, ${(0.5 - py) * (s - 1) * 100}%)`;
-    zoomImg.style.transition = 'transform 0.05s linear';
-  });
+mainWrap.addEventListener('mouseenter', () => {
+  if (!isHoverDevice()) return;
+  isZooming = true;
+  zoomImg.src = images[current];
+  zoomLens.style.opacity = '1';
+  zoomPreview.classList.add('visible');
+  zoomHint.classList.add('hidden');
+});
 
-  setTimeout(() => zoomHint.classList.add('hidden'), 3000);
+mainWrap.addEventListener('mouseleave', () => {
+  isZooming = false;
+  zoomLens.style.opacity = '0';
+  zoomPreview.classList.remove('visible');
+});
+
+mainWrap.addEventListener('mousemove', (e) => {
+  if (!isHoverDevice() || !isZooming) return;
+
+  const rect = mainWrap.getBoundingClientRect();
+
+  // ── Step 1: cursor position relative to image ──
+  const cx = e.clientX - rect.left;
+  const cy = e.clientY - rect.top;
+
+  // ── Step 2: lens top-left (clamped so lens never leaves image) ──
+  const lensLeft = Math.max(0, Math.min(cx - LENS_W / 2, rect.width  - LENS_W));
+  const lensTop  = Math.max(0, Math.min(cy - LENS_H / 2, rect.height - LENS_H));
+
+  // ── Step 3: place lens ──
+  zoomLens.style.left = lensLeft + 'px';
+  zoomLens.style.top  = lensTop  + 'px';
+
+  // ── Step 4: scale preview image to ZOOM_X × display size ──
+  //    This makes each pixel of the lens area = 1 pixel in the preview
+  const scaledW = rect.width  * ZOOM_X;
+  const scaledH = rect.height * ZOOM_Y;
+  zoomImg.style.width  = scaledW + 'px';
+  zoomImg.style.height = scaledH + 'px';
+
+  // ── Step 5: shift preview image so lens area is at top-left of preview ──
+  //    lensLeft on the display image = lensLeft * ZOOM_X on the scaled image
+  //    Negate it to shift that region into view
+  zoomImg.style.left = -(lensLeft * ZOOM_X) + 'px';
+  zoomImg.style.top  = -(lensTop  * ZOOM_Y) + 'px';
+
+  // ── Step 6: position preview panel beside the image ──
+  let panelX = rect.right + PANEL_GAP;
+  let panelY = e.clientY - PREVIEW_H / 2;
+
+  // flip to left side if overflows right viewport edge
+  if (panelX + PREVIEW_W > window.innerWidth - PANEL_GAP) {
+    panelX = rect.left - PREVIEW_W - PANEL_GAP;
+  }
+  // clamp vertically inside viewport
+  panelY = Math.max(PANEL_GAP, Math.min(panelY, window.innerHeight - PREVIEW_H - PANEL_GAP));
+
+  zoomPreview.style.left = panelX + 'px';
+  zoomPreview.style.top  = panelY + 'px';
+});
+
+// sync preview src when carousel changes
+new MutationObserver(() => {
+  if (isZooming) zoomImg.src = images[current];
+}).observe(mainImg, { attributes: true, attributeFilter: ['src'] });
   setImage(0);
 }());
 
