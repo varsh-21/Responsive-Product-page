@@ -593,10 +593,19 @@ button { font-family: inherit; }
   content: "\2713";
   position: absolute;
   left: 0;
-  top: 8px;
-  color: #10b981;
+  top: 10px;
+  color: white;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 /* Price card */
