@@ -1,7 +1,8 @@
 **✨ Features**
 
 **DEPLOYED VERSION** CLICK -> https://mellow-kheer-cec7c4.netlify.app/
-The product page is fully responsive.
+
+Fully responsive.
 
 ## **Features Product Page**
 ****
