@@ -253,6 +253,69 @@ new MutationObserver(() => {
   });
 }());
 
+/* ─────────────────────────────────────────────────────────
+   Versitile application
+───────────────────────────────────────────────────────── */
+const track = document.getElementById('appTrack');
+const prevBtn = document.getElementById('appPrev');
+const nextBtn = document.getElementById('appNext');
+
+const totalCards = 4; // original cards only
+let currentIndex = 0;
+let autoPlay;
+
+function getCardsPerView() {
+  if (window.innerWidth <= 600) return 1;
+  if (window.innerWidth <= 1024) return 2;
+  return 4;
+}
+
+function goToIndex(index) {
+  const cardsPerView = getCardsPerView();
+  const cardWidth = track.children[0].offsetWidth + 20; // width + gap
+
+  // Seamless loop reset
+  if (index >= totalCards) {
+    index = 0;
+    track.style.transition = 'none';
+    track.style.transform = `translateX(0)`;
+    setTimeout(() => {
+      track.style.transition = '0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+    }, 50);
+    currentIndex = 0;
+    return;
+  }
+  if (index < 0) index = totalCards - cardsPerView;
+
+  currentIndex = index;
+  track.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  goToIndex(currentIndex + 1);
+  resetAutoPlay();
+});
+
+prevBtn.addEventListener('click', () => {
+  goToIndex(currentIndex - 1);
+  resetAutoPlay();
+});
+
+function startAutoPlay() {
+  autoPlay = setInterval(() => goToIndex(currentIndex + 1), 3000);
+}
+
+function resetAutoPlay() {
+  clearInterval(autoPlay);
+  startAutoPlay();
+}
+
+// Pause on hover
+track.addEventListener('mouseenter', () => clearInterval(autoPlay));
+track.addEventListener('mouseleave', startAutoPlay);
+
+// Start
+startAutoPlay();
 
 /* ─────────────────────────────────────────────────────────
    4. PROCESS STEPPER

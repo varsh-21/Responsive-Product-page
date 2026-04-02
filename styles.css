@@ -106,6 +106,12 @@ button { font-family: inherit; }
 /* 1200–1439 → 80 / 80 */
 @media (min-width: 1200px) and (max-width: 1439px) {
   :root { --pad-x: 80px; --pad-y: 80px; }
+    .section-sub,
+    .applications-header-text .section-title
+    {
+      width: 60%;
+    }
+
 }
 /* 1080–1199 → 60 / 80 */
 @media (min-width: 1080px) and (max-width: 1199px) {
@@ -164,7 +170,7 @@ button { font-family: inherit; }
   line-height: 1.6;
 }
 .section-header { margin-bottom: 48px; }
-.frequent       { font-weight: 400; color:var( --c-primary-dark)}
+.frequent       { font-weight: 700; color:var( --c-primary-dark)}
 
 
 /* ─────────────────────────────────────────────────────────
@@ -882,7 +888,7 @@ button { font-family: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 48px;
   flex-wrap: wrap;
 }
 
@@ -1124,6 +1130,132 @@ button { font-family: inherit; }
 /* ============================================================
     VERSATILE APPLICATIONS  (horizontal carousel)
 ============================================================  */
+/* APPLICATIONS SECTION */
+.applications {
+  padding: 80px 0;
+  background: white;
+  overflow: hidden;
+}
+
+.applications-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.app-nav-arrows {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-top: 6px;   /* aligns with heading text */
+}
+
+.app-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid #d0d5dd;   /* light gray outline */
+  background: transparent;        /* no fill */
+  color: #1a1a1a;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.app-arrow:hover {
+  background: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+}
+
+/* Track */
+.app-track-wrapper {
+  overflow: hidden;
+  /* peek on right side */
+  margin-right: -60px;
+  width: 100%;
+
+}
+
+.app-track {
+  display: flex;
+  gap: 11px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Cards */
+.app-card {
+  width: 340px;
+  height: 320px;
+  aspect-ratio: 1 / 1;    /* square */
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.app-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.app-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Text overlay at bottom */
+.app-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  color: white;
+}
+
+.app-card-overlay h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.app-card-overlay p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .app-card {
+    min-width: calc(50% - 10px);  /* 2 cards on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .app-card {
+    min-width: 80%;               /* 1 card + peek on mobile */
+  }
+  .applications-header {
+    flex-direction: column;
+  }
+  .app-track-wrapper {
+    margin-right: -20px;
+  }
+}
 
 /* ─────────────────────────────────────────────────────────
    15. PROCESS STEPPER
@@ -1141,7 +1273,7 @@ button { font-family: inherit; }
   color: #0D0D0D;
   line-height: 1.2;
   margin-bottom: 16px;
-  max-width: 620px;
+  max-width: 800px;
   margin-inline: auto;
 }
 .process-subtitle {
@@ -1253,8 +1385,10 @@ button { font-family: inherit; }
 .process-media {
   position: relative;
   overflow: hidden;
-  border-left: 1px solid var(--c-border);
+  border: 1px solid var(--c-border);
   background: #e8eaf0;
+  border-radius: 26px;
+  margin: 20px ;
 }
 .process-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .22s ease; }
 
@@ -1311,7 +1445,7 @@ button { font-family: inherit; }
   .proc-step-title { font-size: 20px; }
   .proc-tab        { padding: 7px 12px; font-size: 12px; }
   .proc-tab-sep    { width: 10px; }
-  .process-media   { height: 240px; border-left: none; border-top: 1px solid var(--c-border); border-radius: 0 0 20px 20px; }
+  .process-media   { height: 240px;  border: 1px solid var(--c-border); border-radius: 20px; }
 }
 @media (max-width: 359px) { .process-media { height: 200px; } }
 
@@ -1324,7 +1458,12 @@ button { font-family: inherit; }
   padding-block:  var(--pad-y);
   padding-inline: var(--pad-x);
 }
-.portfolio .section-header { text-align: center; max-width: 560px; margin-inline: auto; margin-bottom: 48px; }
+.portfolio .section-header { 
+  text-align: center; 
+  /* max-width: 560px; */
+  margin-inline: auto; 
+  margin-bottom: 48px; 
+}
 
 .cards-grid {
   display: grid;
@@ -1337,7 +1476,7 @@ button { font-family: inherit; }
 .card {
   background: var(--c-surface);
   border: 1px solid #CFD1D4;
-  border-radius: 8px;
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1362,7 +1501,7 @@ button { font-family: inherit; }
   text-align: center;
   padding: 9px 20px;
   border: 1.5px solid var(--c-primary);
-  border-radius: 5px;
+  border-radius: 12px;
   font-size: .8rem;
   font-weight: 500;
   color: var(--c-primary);
@@ -1388,6 +1527,7 @@ button { font-family: inherit; }
   border: 1px solid #CFD1D4;
   border-radius: 16px;
   background: var(--c-surface);
+  margin: 40px 20px;
 }
 .cta-text-block h2 { font-size: 26px; font-weight: 600; color: #111827; margin-bottom: 3px; }
 .cta-text-block h2 .highlight { color: var(--c-primary); }
@@ -1525,6 +1665,7 @@ button { font-family: inherit; }
   font-family: Georgia, serif;
   line-height: 1;
   margin-bottom: 12px;
+  font-weight: 900;
 }
 .testimonial-card h4 {
   font-size: 0.95rem;
@@ -1545,8 +1686,8 @@ button { font-family: inherit; }
   border-top: 1px solid var(--border);
 }
 .reviewer-avatar {
-  width: 36px;
-  height: 36px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: var(--bg-light);
   border: 1px solid var(--border);
@@ -1555,7 +1696,10 @@ button { font-family: inherit; }
   font-size: 0.85rem;
   color: var(--text-mid);
 }
-
+.designation{
+  color: #535A61;
+  font-size: 12px;
+}
 /* ─────────────────────────────────────────────────────────
    18. CONTACT HERO
 ───────────────────────────────────────────────────────── */
@@ -1564,6 +1708,7 @@ button { font-family: inherit; }
   margin-inline: auto;
   padding-block:  var(--pad-y);
   padding-inline: var(--pad-x);
+  border-top: 1px solid #d1d5db ;
 }
 
 .contact-hero-inner {
@@ -1577,7 +1722,7 @@ button { font-family: inherit; }
 
 .contact-hero-left { flex: 1; padding-top: 4px; }
 .contact-hero-left h1 { font-size: 40px; font-weight: 800; color: #fff; line-height: 1.22; margin-bottom: 14px; letter-spacing: -.3px; }
-.contact-hero-left .desc { font-size: 18px; color: rgba(255,255,255,.7); line-height: 1.65; margin-bottom: 30px; max-width: 240px; }
+.contact-hero-left .desc { font-size: 18px; color: rgba(255,255,255,.7); line-height: 1.65; margin-bottom: 30px; max-width: 600px; }
 .contact-hero-left .contact-note { font-size: 10px; color: rgba(255,255,255,.5); line-height: 1.7; max-width: 220px; }
 .contact-hero-left .contact-note strong { color: rgba(255,255,255,.65); font-weight: 600; }
 .contact-hero-left .contact-note a      { color: rgba(255,255,255,.55); text-decoration: underline; }
@@ -1676,8 +1821,8 @@ button { font-family: inherit; }
   gap: 16px;
 }
 .mangalam-logo    { display: flex; align-items: center; gap: 8px; }
-.brand-tagline    { font-size: 13.5px; color: #374151; text-align: right; line-height: 1.4; }
-.brand-tagline strong { font-weight: 700; color: #111827; }
+.brand-tagline    { font-size: 20px; color: #111827; text-align: right; line-height: 1.4; }
+.brand-tagline strong { font-weight: 700; }
 
 .site-footer { color: #535A61; }
 
@@ -1736,6 +1881,9 @@ button { font-family: inherit; }
   .brand-tagline    { text-align: left; font-size: 12px; }
 }
 
+  .blue-varient{
+    color: var(--c-primary);
+  }
 
 /* ─────────────────────────────────────────────────────────
    20. MODALS
@@ -1836,7 +1984,7 @@ input.valid   { border-color: #16a34a !important; box-shadow: 0 0 0 3px rgba(22,
 @keyframes slideIn { from { opacity: 0; transform: translateY(-20px) scale(.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
 @media (max-width: 768px) { .modal-container { margin: 16px; max-height: 95vh; } .modal-header { padding: 20px 24px 0; } .modal-form { padding: 0 24px 24px; } }
-@media (max-width: 480px) { .modal-container { margin: 0; border-radius: 20px 20px 0 0; max-height: 100vh; } }
+@media (max-width: 480px) { .modal-container { margin: 5px; border-radius: 20px; max-height: 100vh; } }
 
 
 /* ─────────────────────────────────────────────────────────
