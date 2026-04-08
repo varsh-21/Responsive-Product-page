@@ -379,7 +379,7 @@ button { font-family: inherit; }
   width: 56px;
   height: 56px;
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: fill;
   flex-shrink: 0;
   padding: 4px;
 }
@@ -421,8 +421,8 @@ button { font-family: inherit; }
   }
 
   /* Tighter layout */
-  .sticky-inner         { padding-inline: 16px; gap: 12px; }
-  .sticky-product-img   { width: 44px; height: 44px; }
+  .sticky-inner         { padding-inline: 16px; gap: 12px; margin: 10px 0px; }
+  .sticky-product-img   { width: 68px; height: 68px; }
   .sticky-title         { font-size: 13px; }
   .sticky-price         { font-size: 13px; }
 
@@ -494,7 +494,7 @@ button { font-family: inherit; }
 
 .btn-outline {
   background: transparent;
-  color: var(--c-primary);
+  color: #262A2E;
   border: 1.5px solid var(--c-primary);
 }
 .btn-outline:hover {
@@ -659,14 +659,18 @@ button { font-family: inherit; }
 }
 
 .price-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
-.price-buttons .btn { flex: 1; max-width: 200px; font-size: 15px; font-weight: 600; }
+.price-buttons .btn { flex: 1; max-width: 210px; font-size: 15px; font-weight: 400; }
 
 /* Hero responsive */
 @media (max-width: 960px) { .hero-container { grid-template-columns: 1fr; gap: 32px; } }
 @media (max-width: 480px) {
   .price-buttons   { flex-direction: column; }
   .badge-container { padding: 6px 12px; }
-}
+  .price-buttons .btn {
+    max-width: 100%;
+    padding: 16px 20px;
+    }
+  }
 
 /* ── Carousel ── */
 .carousel-card {
@@ -1505,7 +1509,7 @@ button { font-family: inherit; }
   font-size: .8rem;
   font-weight: 500;
   color: var(--c-primary);
-  background: transparent;
+  background:  var(--c-bg);
   cursor: pointer;
   text-decoration: none;
   transition: background .18s, color .18s;
@@ -1722,8 +1726,10 @@ button { font-family: inherit; }
 
 .contact-hero-left { flex: 1; padding-top: 4px; }
 .contact-hero-left h1 { font-size: 40px; font-weight: 800; color: #fff; line-height: 1.22; margin-bottom: 14px; letter-spacing: -.3px; }
-.contact-hero-left .desc { font-size: 18px; color: rgba(255,255,255,.7); line-height: 1.65; margin-bottom: 30px; max-width: 600px; }
-.contact-hero-left .contact-note { font-size: 10px; color: rgba(255,255,255,.5); line-height: 1.7; max-width: 220px; }
+.contact-hero-left .desc { font-size: 18px; color: rgba(255,255,255,.7); line-height: 1.65; margin-bottom: 10px; max-width: 600px; border-bottom: 1.5px solid #FFFFFF33 ; padding-bottom: 30px;}
+.contact-hero-left .contact-note { font-size: 10px; color: rgba(255,255,255,.5); line-height: 1.7; 
+  /* max-width: 220px; */
+ }
 .contact-hero-left .contact-note strong { color: rgba(255,255,255,.65); font-weight: 600; }
 .contact-hero-left .contact-note a      { color: rgba(255,255,255,.55); text-decoration: underline; }
 
