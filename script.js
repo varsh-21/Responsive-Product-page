@@ -20,8 +20,8 @@
     'https://picsum.photos/seed/hdpe4/800/600',
     'https://picsum.photos/seed/hdpe1/800/600',
     'https://picsum.photos/seed/hdpe3/800/600',
-    'https://images.unsplash.com/photo-1581092160607-a783255640a6?w=900',
-    'https://picsum.photos/seed/hdpe2/800/600'
+    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300',
+    'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=300'
   ];
 
   const mainImg     = document.getElementById('mainImg');
