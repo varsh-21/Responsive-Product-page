@@ -1,6 +1,9 @@
 **✨ Features**
 
-**DEPLOYED VERSION** CLICK -> https://mellow-kheer-cec7c4.netlify.app/
+**DEPLOYED VERSION** CLICK -> 
+https://varsh-21.github.io/Responsive-Product-page/
+
+
 
 Responsive.
 
@@ -68,6 +71,10 @@ Application Process
 **DOUBLE TAP !**
 
 [Screencast from 2026-03-23 01-18-28.webm](https://github.com/user-attachments/assets/70eeef2c-0df2-4b64-9c99-dc6a07e9c021)
+
+
+NETLIFY: https://mellow-kheer-cec7c4.netlify.app/
+
 
 <br>
 <hr>
