@@ -16,7 +16,6 @@ Responsive.
 
 <img width="965" height="522" alt="Screenshot from 2026-04-01 20-39-33" src="https://github.com/user-attachments/assets/cdd0a717-bd7c-4558-8934-dd8ea8b8284d" />
 
-<img width="1079" height="625" alt="Screenshot from 2026-03-23 00-37-24" src="https://github.com/user-attachments/assets/0160feab-f098-409b-9fe9-a84bbcd6b8e4" />
 <hr>
 
 #### Switch Tab
